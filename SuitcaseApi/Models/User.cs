@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SuitcaseApi.Models
 {
@@ -13,7 +14,8 @@ namespace SuitcaseApi.Models
         public string Login { get; set; }
         public string Email { get; set; }
         public string HashedPassword { get; set; }
-        public string RefreshToken { get; set; }
+        public Guid? RefreshToken { get; set; }
+        public DateTime? TokenExpire { get; set; }
         
         public virtual ICollection<Suitcase> Suitcases { get; set; }
     }
